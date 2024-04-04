@@ -1,0 +1,29 @@
+<%= form_with  url: contact_list_path, method: :get, data: {turbo: false}, local: true do |f| %>
+    <% f.text_field :query, placeholder: "Search contacts", class: "contacts", autofocus: true %>
+<% end %>
+
+<div class="flex">
+    <div class="numbers">
+        <div class="col"><p class="n0">0</p></div>
+        <div class="col"><p class="n3">3</p></div>
+        <div class="col"><p class="n6">6</p></div>
+    </div>
+    <div class="numbers">
+        <div class="col"><p class="n1">1</p></div>
+        <div class="col"><p class="n4">4</p></div>
+        <div class="col"><p class="n7">7</p></div>
+    </div>
+    <div class="numbers">
+        <div class="col"><p class="n2">2</p></div>
+        <div class="col"><p class="n5">5</p></div>
+        <div class="col"><p class="n8">8</p></div>
+        <div class="col"><p class="n9">9</p></div>
+    </div>
+</div>
+
+<div class="flex">
+
+<% ("a".."z").each do |c| %>
+        <div class="col"><p class="n<%= c %>"><%= c %></p></div>
+<% end %>
+</div>

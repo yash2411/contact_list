@@ -1,0 +1,10 @@
+<%= render partial: 'contacts/search' %>
+<h1> Contact Lists</h1>
+
+<% @contacts.each do |contact| %>
+    <div>
+        <%= link_to contact.name, contact_path(contact), data: { turbo: false} %>
+    </div>
+<% end %>
+
+<%= link_to "Home", root_path, data: { turbo: false} %>
